@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 
+from appWeb.models.funcionario_model import FuncionarioModel
 from appWeb.models.tipo_oferta_model import TipoOfertaModel
 
 
@@ -10,6 +11,8 @@ class CursoModel(models.Model):
     duracao = models.CharField(max_length=2)
     oferta = models.ForeignKey(TipoOfertaModel, null=True, blank=True, related_name='_oferta_',
                               verbose_name='Oferta')
+    coordenador = models.ForeignKey(FuncionarioModel, null=True, blank=True, related_name='_coordenador_',
+                                    verbose_name='Coordenador')
 
     def __unicode__(self):
         return self.nome
