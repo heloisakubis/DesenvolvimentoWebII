@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Te amo <3")
+    return render(request, 'appWeb/login.html',{})
