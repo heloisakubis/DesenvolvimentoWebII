@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+
+
+    <section class="ui grid">
+        <section class="five wide column"></section>
+        <section class="six wide column">
+            <h2 class="ui teal center aligned header">
+
+                <section class="content">Acesse sua conta</section>
+            </h2>
+            <form class="ui large form">
+                <section class="ui stacked segment">
+                    <section class="field">
+                        <section class="ui left icon input">
+                            <i class="user icon"> </i>
+                            <input name="email" placeholder="E-mail address" type="text"/>
+                        </section>
+                    </section>
+                    <section class="field">
+                        <section class="ui left icon input">
+                            <i class="lock icon"> </i>
+                            <input name="password" placeholder="Password" type="password">
+                        </section>
+                    </section>
+                    <section class="ui fluid large teal submit button">Login</section>
+                </section>
+                <section class="ui error message"></section>
+            </form>
+            <section class="ui message">
+                Esqueceu sua senha?
+                <a href="#">Sign Up</a>
+            </section>
+        </section>
+        <section class="five wide column"></section>
+    </section>
+
+{% endblock %}

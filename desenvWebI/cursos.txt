@@ -1,0 +1,3 @@
+Técnico em Informática, Ensino Técnico integrado ao Ensino Médio, 3, 2, 1
+Técnico em Agropecuária, Ensino Técnico integrado ao Ensino Médio, 3, 2, 2
+Técnico em Quimica, Ensino Técnico integrado ao Ensino Médio, 4, 2, 3

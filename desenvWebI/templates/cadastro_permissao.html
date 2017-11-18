@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+
+<form class="ui form">
+    <h4 class="ui dividing header"><i class="write icon"></i>Cadastro de Ocorrência</h4>
+    <section class="ui equal width form">
+        <section class="fields">
+            <section class="field">
+                <label>Curso</label>
+                <select class="ui dropdown">
+                    <option value="">Curso</option>
+                    <option value="1">Agropecuária</option>
+                    <option value="2">Informática</option>
+                </select>
+            </section>
+            <section class="field">
+                <label>Turma</label>
+                <select class="ui dropdown">
+                    <option value="">Turma</option>
+                    <option value="1">Turma 1</option>
+                    <option value="2">Turma 2</option>
+                </select>
+            </section>
+            <section class="field">
+                <label>Aluno</label>
+                <select class="ui dropdown">
+                    <option value="">Aluno</option>
+                    <option value="1">Maria</option>
+                    <option value="0">João</option>
+                </select>
+            </section>
+            <section class="field">
+                <label>Número de Matrícula</label>
+                <input placeholder="Número de matrícula" type="text">
+            </section>
+</section>
+        <section class="fields">
+            <section class="field">
+                <label>Tipo de Ocorrência</label>
+                <select class="ui dropdown">
+                    <option value="">Tipo de Ocorrência</option>
+                    <option value="1">Entrada</option>
+                    <option value="0">Saída</option>
+                </select>
+            </section>
+            <section class="field">
+                <label>Data</label>
+                <section class="data">
+                </section>
+            </section>
+            <section class="field">
+                <label>Motivo</label>
+                <textarea rows="2"></textarea>
+            </section>
+        </section>
+    </section>
+    {% include 'buttons.html' %}
+</form>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+
+<section class="ui grid">
+    <section class="six wide column">
+        <section class="ui shape">
+            <section class="sides">
+                <section class="active side">
+                    <section class="ui card">
+                        <section class="image">
+                        </section>
+                        <section class="content">
+                            <section class="header">Heloisa Kubis</section>
+                            <section class="meta">
+                                <a>Numero de matricula aqui</a>
+                            </section>
+                            <section class="description">
+                                Turma
+                                Curso
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+    <section class="ten wide column">
+    <section class="ui feed">
+  <section class="event">
+    <section class="label">
+      <img class="image" src='{% static "avatar_aluno.png" %}'>
+    </section>
+    <section class="content">
+      <section class="date">
+        3 days ago
+      </section>
+      <section class="summary">
+         You added <a>Jenny Hess</a> to your <a>coworker</a> group.
+      </section>
+    </section>
+  </section>
+</section>
+</section>
+    </section>
+
+{% endblock %}

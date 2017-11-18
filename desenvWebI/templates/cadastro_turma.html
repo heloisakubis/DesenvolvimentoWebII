@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+
+<form class="ui form">
+    <h4 class="ui dividing header"><i class="edit icon"></i>Cadastro de Turma</h4>
+    <section class="ui equal width form">
+        <section class="fields">
+            <section class="field">
+                <label>Nome</label>
+                <input placeholder="Nome da Turma" type="text">
+            </section>
+            <section class="field">
+                <label>Ano</label>
+                <select class="ui dropdown">
+                    <option value="">Ano</option>
+                    <option value="1">1º Ano</option>
+                    <option value="2">2º Ano</option>
+                    <option value="3">3º Ano</option>
+                    <option value="4">4º Ano</option>
+                </select>
+            </section>
+            <section class="field">
+                <label>Descrição</label>
+                <input placeholder="Descrição" type="text">
+            </section>
+        </section>
+    </section>
+    {% include 'buttons.html' %}
+</form>
+
+{% endblock %}
