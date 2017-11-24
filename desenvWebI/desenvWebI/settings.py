@@ -13,12 +13,18 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_APP = os.path.basename(BASE_DIR)
-PROJECT_ROOT = os.path.dirname(BASE_DIR)
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# PROJECT_APP = os.path.basename(BASE_DIR)
+# PROJECT_ROOT = os.path.dirname(BASE_DIR)
+# TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+# STATIC_DIR = os.path.join(BASE_DIR, 'static')
+# MEDIA_DIR = os.path.join(BASE_DIR, 'media')
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
@@ -128,16 +134,18 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-# STATIC_URL = '/static/'
-#
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, '../static'),
-# )
-
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-MEDIA_URL = '/media/'
-
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.8/howto/static-files/
 STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
+#Media files
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'
+
+
+PROJECT_APP_PATH = os.path.dirname(os.path.abspath(__file__))
+PROJECT_APP = os.path.basename(PROJECT_APP_PATH)
+PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
