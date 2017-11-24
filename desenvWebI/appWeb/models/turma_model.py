@@ -5,10 +5,11 @@ from appWeb.models.curso_model import CursoModel
 
 class TurmaModel(models.Model):
     nome = models.CharField(max_length=50)
-    descricao = models.CharField(max_length= 100)
+    descricao = models.TextField(max_length=100)
     ano = models.CharField(max_length=30)
-    curso = models.ForeignKey(CursoModel, null=True, blank=True, related_name='_curso_',
+    curso = models.ForeignKey(CursoModel, related_name='_curso_',
                               verbose_name='Curso')
+    excluido = models.BooleanField(default=False)
 
     def __unicode__(self):
         return self.nome

@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        {% load staticfiles static %}
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href='{% static "semanticui/dist/semantic.min.css" %}'>
+<head>
+    {% load staticfiles static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href='{% static "semanticui/dist/semantic.min.css" %}'>
 
-        <link rel="stylesheet" type="text/css" href='{% static "arquivo.css" %}'>
-        <link rel="stylesheet" type="text/css" href='{% static "css/button.css" %}'>
-        <script src='{% static "jquery-3.2.1.min.js" %}'></script>
-        <script src='{% static "web.js" %}'></script>
-        <script src='{% static "semanticui/dist/semantic.min.js" %}'></script>
-    </head>
-    <body>
-    <header class="ui inverted center aligned">
-         <h2 class="ui inverted image header">
-                <img class="image" src='{% static "logo.png" %}'>
+    <link rel="stylesheet" type="text/css" href='{% static "arquivo.css" %}'>
+    <script src='{% static "jquery-3.2.1.min.js" %}'></script>
+    <script src='{% static "web.js" %}'></script>
+    <script src='{% static "semanticui/dist/semantic.min.js" %}'></script>
+</head>
+<body>
+<header class="ui inverted center aligned">
+    <h2 class="ui inverted image header">
+        <img class="image" src='{% static "logo.png" %}'>
 
-                <section class="content"> Sistema de Controle de Fluxo de Alunos</section>
-         </h2>
-    </header>
-    <nav class="ui menu large">
-        <a href="#"><i class="home icon"></i> Home</a>
-        <a href="#"><i class="log out icon"></i>Sair</a>
+        <span class="content"> Sistema de Controle de Fluxo de Alunos</span>
+    </h2>
+</header>
+{% if user.is_authenticated %}
+    <nav class="ui menu stackable">
+        <a class="item" href="{% url 'index' %}"><i class="icon large home"></i>Home</a>
+
+        <div class="menu right aligned stackable">
+            <a class="item" href="{% url 'logout' %}"><i class="log out icon large "></i>Sair</a>
+        </div>
     </nav>
-    <article class=" ui raised very padded container segment">
-        {% block conteudo %}
+{% endif %}
+<article class="ui centered middle aligned grid stackable">
+    {% block conteudo %}
 
-        {% endblock %}
-    </article>
+    {% endblock %}
+</article>
 
-    <footer class="ui inverted vertical footer relaxed segment">
-        <section class="ui five column middle aligned centered inverted divided stackable grid">
-            <section class="two wide column">
-                <h3 class="ui inverted icon header">
-                    <section class="content">
-                        SIFLUX
-                        <section class="sub header">© Copyright 2017.</section>
-                    </section>
-                </h3>
-            </section>
-        </section>
-    </footer>
-    </body>
+<footer class="ui five column middle aligned centered inverted divided stackable grid">
+    <section class="two wide column">
+        <h3 class="ui inverted icon header">
+            <span class="content">
+                SIFLUX
+                <span class="sub header">© Copyright 2017.</span>
+            </span>
+        </h3>
+    </section>
+</footer>
+</body>
 </html>

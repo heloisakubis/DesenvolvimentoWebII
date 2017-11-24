@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+    <section class="ui twelve wide column segment">
+        <h3 class="ui dividing header centered"><i class="users icon"></i>Funcionários</h3>
+        <table class="ui table">
+            <thead class="full-width center aligned">
+            <tr>
+                <th><i class="user icon"></i>Pessoa</th>
+                <th><i class="mail icon"></i>E-mail</th>
+                <th><i class="id card icon"></i>Número de matrícula</th>
+                <th><i class="settings icon"></i>Ações</th>
+            </tr>
+            </thead>
+            <tbody class="center aligned">
+            {% for funcionario in object_list %}
+                <tr>
+                    <td>{{ funcionario.get_full_name }}</td>
+                    <td>{{ funcionario.email }}</td>
+                    <td>{{ funcionario.matricula }}</td>
+                    <td>
+                        <section class="floated content">
+                            <a class="ui left attached button blue"
+                               href="{% url 'edita_funcionario' funcionario.id %}">
+                                <i class="edit icon"></i>
+                            </a>
+                            <a class="right attached ui button red"
+                               href="{% url 'exclui_funcionario' funcionario.id %}">
+                                <i class="close icon "></i>
+                            </a>
+                        </section>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            <tfoot class="full-width">
+            <tr>
+                <th></th>
+                <th colspan="4">
+                    <a class="ui right floated small green labeled icon button"
+                       href="{% url 'cadastra_funcionario' %}">
+                        <i class="plus icon"></i> Adicionar Novo
+                    </a>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+    </section>
+{% endblock %}

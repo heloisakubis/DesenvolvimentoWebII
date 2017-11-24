@@ -11,10 +11,10 @@ class AlunoModel(models.Model):
     matricula = models.CharField(max_length=20)
     turma = models.ForeignKey(TurmaModel)
     curso = models.ForeignKey(CursoModel)
-    nome_pai = models.CharField(max_length=80)
+    nome_pai = models.CharField(max_length=80, blank=True, null=True)
     nome_mae = models.CharField(max_length=80)
     telefone_responsavel = models.CharField(max_length=9)
-
+    excluido = models.BooleanField(default=False)
 
     def __unicode__(self):
         return self.nome

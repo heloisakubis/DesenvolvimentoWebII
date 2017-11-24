@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 
-class TipoFuncionarioModel(models.Model):
-    nome = models.CharField(max_length=50)
+class TipoOcorrenciaModel(models.Model):
+    nome = models.CharField(max_length=80)
     excluido = models.BooleanField(default=False)
 
     def __unicode__(self):
@@ -12,5 +12,6 @@ class TipoFuncionarioModel(models.Model):
         return self.nome
 
     class Meta:
-        verbose_name = 'Tipo Funcionario'
-        verbose_name_plural = 'Tipo Funcionários'
+        app_label = 'appWeb'
+        verbose_name = 'Tipo Ocorrência'
+        verbose_name_plural = 'Tipo Ocorrência'

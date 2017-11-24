@@ -2,13 +2,14 @@ from django.db import models
 
 
 class TipoOfertaModel(models.Model):
-    descricao = models.CharField(max_length=50)
+    nome = models.CharField(max_length=50)
+    excluido = models.BooleanField(default=False)
 
     def __unicode__(self):
-        return self.descricao
+        return self.nome
 
     def __str__(self):
-        return self.descricao
+        return self.nome
 
     class Meta:
         verbose_name = 'Tipo Oferta'

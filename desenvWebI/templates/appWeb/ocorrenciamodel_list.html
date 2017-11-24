@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+    <section class="ui twelve wide column segment">
+        <h3 class="ui dividing header centered"><i class="announcement icon"></i>Ocorrências</h3>
+        <table class="ui table">
+            <thead class="full-width center aligned">
+            <tr>
+                <th><i class="user icon"></i>Pessoa</th>
+                <th><i class="calendar icon"></i>Data</th>
+                <th><i class="info icon"></i>Motivo</th>
+                <th><i class="settings icon"></i>Ações</th>
+            </tr>
+            </thead>
+            <tbody class="center aligned">
+            {% for ocorrencia in object_list %}
+                <tr>
+                    <td>{{ ocorrencia.aluno }}</td>
+                    <td>{{ ocorrencia.data_ocorrencia }}</td>
+                    <td>{{ ocorrencia.motivo }}</td>
+                    <td>
+                        <section class="floated content">
+                            <a class="ui icon button blue" href="{% url 'edita_ocorrencia' ocorrencia.id %}">
+                                <i class="edit icon"></i>
+                            </a>
+                        </section>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            <tfoot class="full-width">
+            <tr>
+                <th></th>
+                <th colspan="4">
+                    <a class="ui right floated small green labeled icon button"
+                       href="{% url 'cadastra_ocorrencia' %}">
+                        <i class="plus icon"></i> Nova Ocorrência
+                    </a>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+    </section>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static tags_funcionario %}
+
+{% block conteudo %}
+    <form class="ui twelve wide column large form segment" action='' method="post">
+        <h4 class="ui dividing header"><i class="announcement icon"></i>Ocorrência</h4>
+        {% csrf_token %}
+        <section class="ui equal width form">
+            <section class="two fields">
+                <section class="field">
+                    <label>Aluno</label>
+                    {% with request.get_full_path|get_aluno as aluno %}
+                        {% if  aluno %}
+                            <select id="id_aluno" name="aluno" class="ui disabled">
+                                <option selected value="{{ aluno.id }}">{{ aluno.nome }}</option>
+                            </select>
+                        {% else %}
+                            {{ form.aluno }}
+
+                        {% endif %}
+                    {% endwith %}
+                    {% if form.aluno.errors %}
+                        <section class="ui pointing red basic label">
+                            {{ form.aluno.errors }}
+                        </section>
+                    {% endif %}
+                </section>
+                <section class="field">
+                    <label>Tipo de Ocorrência</label>
+                    {{ form.tipo_ocorrencia }}
+                    {% if form.tipo_ocorrencia.errors %}
+                        <section class="ui pointing red basic label">
+                            {{ form.tipo_ocorrencia.errors }}
+                        </section>
+                    {% endif %}
+                </section>
+            </section>
+            <section class="three fields">
+                <section class="field">
+                    <label>Data</label>
+                    {{ form.data_ocorrencia }}
+                </section>
+                <section class="field">
+                    <label>Hora</label>
+                    {{ form.hora_ocorrencia }}
+                </section>
+                <section class="field">
+                    <label>Motivo</label>
+                    {{ form.motivo }}
+                    {% if form.motivo.errors %}
+                        <section class="ui pointing red basic label">
+                            {{ form.motivo.errors }}
+                        </section>
+                    {% endif %}
+
+                </section>
+            </section>
+        </section>
+        {#                {{ form.as_p }}#}
+        {% include 'buttons.html' %}
+    </form>
+{% endblock %}

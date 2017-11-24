@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+    <form class="ui twelve wide column large form segment" action='' method="post">
+        <h4 class="ui dividing header"><i class="users icon"></i>Funcionário</h4>
+        {% csrf_token %}
+        <section class="ui equal width form">
+            <section class="fields">
+                <section class="field">
+                    <label>Nome</label>
+                    {{ form.first_name }}
+                    {% if form.first_name.errors %}
+                        <section class="ui pointing red basic label">
+                            {{ form.first_name.errors }}
+                        </section>
+                    {% endif %}
+                </section>
+                <section class="field">
+                    <label>Sobrenome</label>
+                    {{ form.last_name }}
+                    {% if form.last_name.errors %}
+                        <section class="ui pointing red basic label">
+                            {{ form.last_name.errors }}
+                        </section>
+                    {% endif %}
+                </section>
+                <section class="field">
+                    <label>E-mail</label>
+                    {{ form.email }}
+                    {% if form.email.errors %}
+                        <section class="ui pointing red basic label">
+                            {{ form.email.errors }}
+                        </section>
+                    {% endif %}
+                </section>
+            </section>
+            <section class="fields">
+                <section class="field">
+                    <label>Usuário</label>
+                    {{ form.username }}
+                    {% if form.username.errors %}
+                        <section class="ui pointing red basic label">
+                            {{ form.username.errors }}
+                        </section>
+                    {% endif %}
+                </section>
+                <section class="field">
+                    <label>Senha</label>
+                    {{ form.password }}
+                    {% if form.password.errors %}
+                        <section class="ui pointing red basic label">
+                            {{ form.password.errors }}
+                        </section>
+                    {% endif %}
+                </section>
+                <section class="field">
+                    <label>Número de Matrícula</label>
+                    {{ form.matricula }}
+                    {% if form.matricula.errors %}
+                        <section class="ui pointing red basic label">
+                            {{ form.matricula.errors }}
+                        </section>
+                    {% endif %}
+                </section>
+            </section>
+            <section class="fields">
+                <section class="field">
+                    <label>Cargo</label>
+                    {{ form.funcao }}
+                    {% if form.funcao.errors %}
+                        <section class="ui pointing red basic label">
+                            {{ form.funcao.errors }}
+                        </section>
+                    {% endif %}
+                </section>
+            </section>
+        </section>
+        {% include 'buttons.html' %}
+    </form>
+{% endblock %}

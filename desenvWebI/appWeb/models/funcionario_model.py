@@ -6,8 +6,9 @@ from appWeb.models.tipo_funcionario_model import TipoFuncionarioModel
 
 class FuncionarioModel(User):
     matricula = models.CharField(max_length=20)
-    funcao = models.ForeignKey(TipoFuncionarioModel, null=True, blank=True, related_name='_funcao_',
-                              verbose_name='Função')
+    funcao = models.ForeignKey(TipoFuncionarioModel, verbose_name='Função')
+    excluido = models.BooleanField(default=False)
+    coordenador = models.BooleanField(default=False)
 
     def __unicode__(self):
         return self.first_name

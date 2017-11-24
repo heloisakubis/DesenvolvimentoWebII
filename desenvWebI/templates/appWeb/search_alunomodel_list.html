@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+    <section class="ui twelve wide column segment">
+        <h3 class="ui dividing header centered "><i class="student icon"></i>Ocorrência</h3>
+        <p class="ui teal message ">Pesquise e selecione um aluno para adicionar uma ocorrência.</p>
+        <form class="ui form" method="get" action="">
+            <section class="ui category search">
+                <p class="ui icon input">
+                    <input name="name" class="prompt" placeholder="Procurar Aluno" type="text">
+                    <i class="search icon"></i>
+                </p>
+                <input hidden type="submit"/>
+            </section>
+        </form>
+
+        <table class="ui compact  table">
+            <thead class="full-width center aligned">
+            <tr>
+                <th><i class="user icon"></i>Pessoa</th>
+                <th><i class="mail icon"></i>E-mail</th>
+                <th><i class="id card icon"></i>Número de matrícula</th>
+                <th><i class="add icon"></i>Adicionar</th>
+            </tr>
+            </thead>
+            <tbody class="center aligned">
+            {% for aluno in object_list %}
+                <tr>
+                    <td>{{ aluno.nome }}</td>
+                    <td>{{ aluno.email }}</td>
+                    <td>{{ aluno.matricula }}</td>
+                    <td>
+                        <section class="floated content">
+                            <a class="ui icon button blue" href="{% url 'cadastra_aluno_ocorrencia' aluno.id %}">
+                                <i class="add icon"></i>
+                            </a>
+                        </section>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            <tfoot class="full-width">
+            <tr>
+                <th></th>
+                <th colspan="4">
+                    <a class="ui right floated small green labeled icon button"
+                       href="{% url 'cadastra_aluno' %}">
+                        <i class="plus icon"></i> Novo Aluno
+                    </a>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+    </section>
+    </section>
+{% endblock %}

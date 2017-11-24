@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+    <form class="ui twelve wide column large form segment" action='' method="post">
+        <h4 class="ui dividing header"><i class="users icon"></i>Turma</h4>
+        {% csrf_token %}
+        <section class="ui equal width form">
+            <section class="three fields">
+                <section class="field">
+                    <label>Nome</label>
+                    {{ form.nome }}
+                    {% if form.descricao.errors %}
+                        <section class="ui pointing red basic label">
+                            {{ form.descricao.errors }}
+                        </section>
+                    {% endif %}
+                </section>
+                <section class="field">
+                    <label>Ano</label>
+                    {{ form.ano }}
+                    {% if form.ano.errors %}
+                        <section class="ui pointing red basic label">
+                            {{ form.ano.errors }}
+                        </section>
+                    {% endif %}
+                </section>
+                <section class="field">
+                    <label>Curso</label>
+                    {{ form.curso }}
+                    {% if form.curso.errors %}
+                        <section class="ui pointing red basic label">
+                            {{ form.curso.errors }}
+                        </section>
+                    {% endif %}
+                </section>
+            </section>
+            <section class="field">
+                <label>Descrição</label>
+                {{ form.descricao }}
+                {% if form.descricao.errors %}
+                    <section class="ui pointing red basic label">
+                        {{ form.descricao.errors }}
+                    </section>
+                {% endif %}
+            </section>
+
+        </section>
+        {% include 'buttons.html' %}
+    </form>
+{% endblock %}

@@ -12,17 +12,20 @@ footer {
 
 }
 
-conteudo{
-    margin-top: auto;
-    margin-botton: auto;
-}
-
 article {
-    margin-top: -1;
     min-height: 77% !important;
 }
-.ui.menu.large {
+
+nav.ui.menu.stackable{
     margin-top: 0;
-    padding: 1% 1% 1% 1%;
 }
 
+.ui.centered.grid > .column:not(.aligned):not(.justified):not(.row), .ui.centered.grid > .row > .column:not(.aligned):not(.justified), .ui.grid .centered.row > .column:not(.aligned):not(.justified) {
+    text-align: center;
+}
+
+ul.errorlist > li, ul.errorlist {
+    list-style: none;
+    padding: 0 !important;
+    margin: 0 !important;
+}

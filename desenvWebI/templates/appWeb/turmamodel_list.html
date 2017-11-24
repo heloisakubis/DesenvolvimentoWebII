@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+    <section class="ui twelve wide column segment">
+        <h3 class="ui dividing header centered"><i class="users icon"></i>Turmas</h3>
+        <table class="ui table">
+            <thead class="ui center aligned">
+            <tr>
+                <th><i class="user icon"></i>Nome</th>
+                <th><i class="info icon"></i>Descrição</th>
+                <th><i class=""></i>Ano</th>
+                <th><i class="settings icon"></i>Ações</th>
+            </tr>
+            </thead>
+            <tbody class="ui center aligned">
+            {% for turma in object_list %}
+                <tr>
+                    <td>{{ turma.nome }}</td>
+                    <td>{{ turma.descricao }}</td>
+                    <td>{{ turma.ano }}</td>
+                    <td>
+                        <section class="ui floated content">
+                            <a class="ui left attached button blue" href="{% url 'edita_turma' turma.id %}">
+                                <i class="edit icon"></i>
+                            </a>
+                            <a class="ui right attached ui button red" href="{% url 'exclui_turma' turma.id %}">
+                                <i class="close icon "></i>
+                            </a>
+                        </section>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            <tfoot class="">
+            <tr>
+                <th></th>
+                <th colspan="4">
+                    <a class="ui right floated small green labeled icon button"
+                       href="{% url 'cadastra_turma' %}">
+                        <i class="plus icon"></i> Nova Turma
+                    </a>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+    </section>
+
+{% endblock %}
