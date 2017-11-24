@@ -15,6 +15,14 @@ class OcorrenciaForm(forms.ModelForm):
         }
 
 
+TYPE_CHOICES = (
+    ('nome', 'Nome'),
+    ('matricula', 'Matricula'),
+    ('turma', 'Turma'),
+    ('curso', 'Curso'),
+)
+
 
 class AlunoSearchForm(forms.Form):
     name = forms.CharField()
+    tipo = forms.Select(choices=TYPE_CHOICES)

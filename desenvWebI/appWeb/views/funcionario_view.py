@@ -36,6 +36,7 @@ class FuncionarioDeleteView(DeleteView):
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
         self.object.excluido = True
+        self.object.is_active = False
         self.object.save()
         success_url = self.get_success_url()
         return HttpResponseRedirect(success_url)

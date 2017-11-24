@@ -29,11 +29,26 @@ class AlunoOcorrenciaListView(ListView):
         queryset = AlunoModel.objects.filter(excluido=False).order_by('-id').distinct()
         form = self.form_class(self.request.GET)
         if form.is_valid():
-            queryset = AlunoModel.objects.filter(nome__icontains=form.cleaned_data['name'], excluido=False).order_by(
-                '-id').distinct()
+            print('tipo', self.request.GET.get('tipo'))
+            if self.request.GET.get('tipo') == 'nome':
+                queryset = AlunoModel.objects.filter(nome__icontains=form.cleaned_data['name'],
+                                                     excluido=False).order_by(
+                    '-id').distinct()
+            elif self.request.GET.get('tipo') == 'matricula':
+                queryset = AlunoModel.objects.filter(matricula__icontains=form.cleaned_data['name'],
+                                                     excluido=False).order_by(
+                    '-id').distinct()
+            elif self.request.GET.get('tipo') == 'turma':
+                queryset = AlunoModel.objects.filter(turma__nome__icontains=form.cleaned_data['name'],
+                                                     excluido=False).order_by(
+                    '-id').distinct()
+            elif self.request.GET.get('tipo') == 'curso':
+                queryset = AlunoModel.objects.filter(curso__nome__icontains=form.cleaned_data['name'],
+                                                     excluido=False).order_by(
+                    '-id').distinct()
+
             return queryset
         return queryset
-
 
 
 @method_decorator(login_required, name='dispatch')
@@ -49,13 +64,11 @@ class OcorrenciaCreateView(CreateView):
         return super(OcorrenciaCreateView, self).form_valid(form)
 
 
-
 @method_decorator(login_required, name='dispatch')
 class OcorrenciaUpdateView(UpdateView):
     success_url = '/'
     model = OcorrenciaModel
     form_class = OcorrenciaForm
-
 
 
 @method_decorator(login_required, name='dispatch')
