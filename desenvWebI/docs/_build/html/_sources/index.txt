@@ -11,11 +11,17 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   intro
+   funcionarioNupe
+   professor
+   portaria
+   sistema
 
 
+..
 Indices and tables
 ==================
-
+..
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
