@@ -1,0 +1,262 @@
+
+#: ../templates/registration/login.html:8
+msgid "Acesse sua conta"
+msgstr "Access your account"
+
+#: ../templates/registration/login.html:15
+msgid "Usuário ou senha inválidos!"
+msgstr "Invalid user or password!"
+
+#: ../templates/base.html:18
+msgid "Sistema de Controle de Fluxo de Alunos"
+msgstr "Student Flow Control System"
+
+#: ../templates/base.html:24
+msgid "Documentação"
+msgstr "Documentation"
+
+#: ../templates/base.html:27
+msgid "Sair"
+msgstr "Logout"
+
+#: ../templates/buttons.html:4
+msgid "Cadastrar"
+msgstr "Register"
+
+#: ../templates/buttons.html:5
+msgid "Limpar"
+msgstr "Clean"
+
+#: ../templates/buttons.html:7
+msgid "Cancelar"
+msgstr "Cancel"
+
+#: ../templates/index.html:12
+#: ../templates/appWeb/funcionariomodel_list.html:6
+msgid "Funcionários"
+msgstr "Employees"
+
+#: ../templates/index.html:22
+#: ../templates/appWeb/alunomodel_list.html:6
+msgid "Alunos"
+msgstr "Students"
+
+#: ../templates/index.html:32
+#: ../templates/appWeb/cursomodel_list.html:6
+msgid "Cursos"
+msgstr "Courses"
+
+#: ../templates/index.html:42
+#: ../templates/appWeb/turmamodel_list.html:6
+msgid "Turmas"
+msgstr "Classes"
+
+#: ../templates/index.html:53
+#: ../templates/index.html:64
+#: ../templates/appWeb/ocorrenciamodel_list.html:6
+msgid "Ocorrências"
+msgstr "Occurrences"
+
+#: ../templates/index.html:72
+msgid "Procurar Ocorrência"
+msgstr "Search Occurrence"
+
+#: ../templates/index.html:85
+#: ../templates/appWeb/alunomodel_list.html:14
+#: ../templates/appWeb/funcionariomodel_list.html:10
+#: ../templates/appWeb/ocorrenciamodel_list.html:10
+#: ../templates/appWeb/search_alunomodel_list.html:34
+msgid "Pessoa"
+msgstr "Person"
+
+#: ../templates/index.html:86
+#: ../templates/appWeb/ocorrenciamodel_form.html:40
+#: ../templates/appWeb/ocorrenciamodel_list.html:11
+msgid "Data"
+msgstr "Date"
+
+#: ../templates/index.html:87
+#: ../templates/appWeb/ocorrenciamodel_form.html:48
+#: ../templates/appWeb/ocorrenciamodel_list.html:12
+msgid "Motivo"
+msgstr "Reason"
+
+#: ../templates/appWeb/alunomodel_form.html:6
+#: ../templates/appWeb/ocorrenciamodel_form.html:11
+msgid "Aluno"
+msgstr "Student"
+
+#: ../templates/appWeb/alunomodel_form.html:11
+#: ../templates/appWeb/cursomodel_form.html:11
+#: ../templates/appWeb/cursomodel_list.html:11
+#: ../templates/appWeb/search_alunomodel_list.html:19
+#: ../templates/appWeb/tipofuncionariomodel_form.html:11
+#: ../templates/appWeb/tipoofertamodel_form.html:12
+#: ../templates/appWeb/tipopermissaomodel_form.html:13
+#: ../templates/appWeb/turmamodel_form.html:11
+#: ../templates/appWeb/turmamodel_list.html:10
+#: ../templates/appWeb/funcionariomodel_form.html:11
+msgid "Nome"
+msgstr "Name"
+
+#: ../templates/appWeb/alunomodel_form.html:31
+#: ../templates/appWeb/search_alunomodel_list.html:21
+#: ../templates/appWeb/turmamodel_form.html:6
+msgid "Turma"
+msgstr "Class"
+
+#: ../templates/appWeb/alunomodel_form.html:40
+#: ../templates/appWeb/cursomodel_form.html:6
+#: ../templates/appWeb/search_alunomodel_list.html:22
+#: ../templates/appWeb/turmamodel_form.html:29
+msgid "Curso"
+msgstr "Course"
+
+#: ../templates/appWeb/alunomodel_form.html:49
+#: ../templates/appWeb/alunomodel_list.html:16
+#: ../templates/appWeb/funcionariomodel_form.html:58
+#: ../templates/appWeb/funcionariomodel_list.html:12
+#: ../templates/appWeb/search_alunomodel_list.html:36
+msgid "Número de Matrícula"
+msgstr "Registration Number"
+
+#: ../templates/appWeb/alunomodel_form.html:60
+msgid "Nome da Mãe"
+msgstr "Mother's Name"
+
+#: ../templates/appWeb/alunomodel_form.html:69
+msgid "Nome do Pai"
+msgstr "Father's Name"
+
+#: ../templates/appWeb/alunomodel_form.html:78
+msgid "Telefone do Responsável"
+msgstr "Responsible Telephone"
+
+#: ../templates/appWeb/alunomodel_list.html:17
+#: ../templates/appWeb/cursomodel_list.html:14
+#: ../templates/appWeb/funcionariomodel_list.html:13
+#: ../templates/appWeb/ocorrenciamodel_list.html:13
+#: ../templates/appWeb/turmamodel_list.html:13
+msgid "Ações"
+msgstr "Actions"
+
+#: ../templates/appWeb/alunomodel_list.html:45
+#: ../templates/appWeb/search_alunomodel_list.html:62
+msgid "Novo Aluno"
+msgstr "New Student"
+
+#: ../templates/appWeb/cursomodel_form.html:20
+#: ../templates/appWeb/cursomodel_list.html:13
+msgid "Coordenador"
+msgstr "Coordinator"
+
+#: ../templates/appWeb/cursomodel_form.html:29
+msgid "Tipo de Oferta"
+msgstr "Type of Offer"
+
+#: ../templates/appWeb/cursomodel_form.html:38
+msgid "Duração"
+msgstr "Duration"
+
+#: ../templates/appWeb/cursomodel_form.html:49
+msgid "Descrição do Curso"
+msgstr "Course Description"
+
+#: ../templates/appWeb/cursomodel_list.html:12
+#: ../templates/appWeb/turmamodel_form.html:39
+#: ../templates/appWeb/turmamodel_list.html:11
+msgid "Descrição"
+msgstr "Description"
+
+#: ../templates/appWeb/cursomodel_list.html:41
+msgid "Novo Curso"
+msgstr "New Course"
+
+#: ../templates/appWeb/funcionariomodel_form.html:6
+msgid "Funcionário"
+msgstr "Employee"
+
+#: ../templates/appWeb/funcionariomodel_form.html:20
+msgid "Sobrenome"
+msgstr "Last Name"
+
+#: ../templates/appWeb/funcionariomodel_form.html:40
+msgid "Usuário"
+msgstr "User"
+
+#: ../templates/appWeb/funcionariomodel_form.html:49
+msgid "Senha"
+msgstr "Password"
+
+#: ../templates/appWeb/funcionariomodel_form.html:69
+msgid "Cargo"
+msgstr "Post"
+
+#: ../templates/appWeb/funcionariomodel_list.html:39
+msgid "Adicionar Novo"
+msgstr "Add New"
+
+#: ../templates/appWeb/ocorrenciamodel_form.html:6
+#: ../templates/appWeb/search_alunomodel_list.html:6
+msgid "Ocorrência"
+msgstr "Occurrence"
+
+#: ../templates/appWeb/ocorrenciamodel_form.html:29
+msgid "Tipo de Ocorrência"
+msgstr "Occurrence Type"
+
+#: ../templates/appWeb/ocorrenciamodel_form.html:44
+msgid "Hora"
+msgstr "Hour"
+
+#: ../templates/appWeb/ocorrenciamodel_list.html:38
+msgid "Nova Ocorrência"
+msgstr "New Occurrence"
+
+#: ../templates/appWeb/search_alunomodel_list.html:7
+msgid "Pesquise e selecione um aluno para adicionar uma ocorrência."
+msgstr "Search and select a student to add an occurrence."
+
+#: ../templates/appWeb/search_alunomodel_list.html:13
+msgid "Pesquisar por ..."
+msgstr "Search for ..."
+
+#: ../templates/appWeb/search_alunomodel_list.html:20
+msgid "Matrícula"
+msgstr "Registration"
+
+#: ../templates/appWeb/search_alunomodel_list.html:26
+msgid "Pesquisar"
+msgstr "Search"
+
+#: ../templates/appWeb/search_alunomodel_list.html:
+msgid ""
+msgstr ""
+
+#: ../templates/appWeb/search_alunomodel_list.html:37
+msgid "Adicionar"
+msgstr "Add"
+
+#: ../templates/appWeb/tipofuncionario_form.html:6
+msgid "Cadastro de Tipo de Funcionários"
+msgstr "Employee Type Registration"
+
+#: ../templates/appWeb/tipoofertamodel_form.html:6
+msgid "Cadastro de Tipo de Oferta para Cursos"
+msgstr "Course Offer Type Registration"
+
+#: ../templates/appWeb/tipopermissaomodel_form.html:7
+msgid "Cadastro de Tipo de Permissão"
+msgstr "Permit Type Registration"
+
+#: ../templates/appWeb/turmamodel_form.html:20
+#: ../templates/appWeb/turmamodel_list.html:12
+msgid "Ano"
+msgstr "Year"
+
+#: ../templates/appWeb/turmamodel_list.html:
+msgid "Nova Turma"
+msgstr "New Class"
+
+
+
