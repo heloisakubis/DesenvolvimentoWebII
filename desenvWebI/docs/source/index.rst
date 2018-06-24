@@ -1,6 +1,6 @@
 
 
-Welcome to SIFLUX's documentation!
+Bem vindo(a) à Documentação do SIFLUX
 ==================================
 
 .. toctree::
@@ -14,9 +14,11 @@ Welcome to SIFLUX's documentation!
    sistema
 
 
-Indices and tables
+Páginas
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+* :ref:`intro`
+* :ref:`funcionarioNupe`
+* :ref:`professor`
+* :ref:`portaria`
+* :ref:`sistema`
