@@ -13,12 +13,5 @@ Bem vindo(a) à Documentação do SIFLUX
    portaria
    sistema
 
-
-Páginas
-==================
-
-* :ref:`intro.html`
-* :ref:`funcionarioNupe`
-* :ref:`professor`
-* :ref:`portaria`
-* :ref:`sistema`
+       A aplicação possibilita o acompanhamento de entrada e saída de alunos no Campus.
+       Foram criados cadastros de: professor, funcionários do NUPE, responsável pela portaria e de alunos.
