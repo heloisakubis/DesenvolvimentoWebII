@@ -17,7 +17,7 @@ Bem vindo(a) à Documentação do SIFLUX
 Páginas
 ==================
 
-* :ref:`intro`
+* :ref:`intro.html`
 * :ref:`funcionarioNupe`
 * :ref:`professor`
 * :ref:`portaria`
