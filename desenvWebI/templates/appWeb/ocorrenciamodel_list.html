@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block conteudo %}
     <section class="ui twelve wide column segment">
-        <h3 class="ui dividing header centered"><i class="announcement icon"></i>Ocorrências</h3>
+        <h3 class="ui dividing header centered"><i class="announcement icon"></i>{% trans "Ocorrências" %}</h3>
         <table class="ui table">
             <thead class="full-width center aligned">
             <tr>
-                <th><i class="user icon"></i>Pessoa</th>
-                <th><i class="calendar icon"></i>Data</th>
-                <th><i class="info icon"></i>Motivo</th>
-                <th><i class="settings icon"></i>Ações</th>
+                <th><i class="user icon"></i>{% trans "Pessoa" %}</th>
+                <th><i class="calendar icon"></i>{% trans "Data" %}</th>
+                <th><i class="info icon"></i>{% trans "Motivo" %}</th>
+                <th><i class="settings icon"></i>{% trans "Ações" %}</th>
             </tr>
             </thead>
             <tbody class="center aligned">
@@ -35,7 +36,7 @@
                 <th colspan="4">
                     <a class="ui right floated small green labeled icon button"
                        href="{% url 'cadastra_ocorrencia' %}">
-                        <i class="plus icon"></i> Nova Ocorrência
+                        <i class="plus icon"></i> {% trans "Nova Ocorrência" %}
                     </a>
                 </th>
             </tr>

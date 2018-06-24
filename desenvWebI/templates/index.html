@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load tags_funcionario static %}
 
 
@@ -9,7 +10,7 @@
                 <section class="card">
                     <section class="content center aligned">
                         <section class="header">
-                            <a href="{% url 'funcionario_list' %}"><i class="users icon"></i> Funcionários</a>
+                            <a href="{% url 'funcionario_list' %}"><i class="users icon"></i> {% trans "Funcionários" %}</a>
                         </section>
                     </section>
                     <a class="ui bottom attached button teal" href="{% url 'cadastra_funcionario' %}">
@@ -19,7 +20,7 @@
                 <section class="card">
                     <section class="content center aligned">
                         <section class="header">
-                            <a href="{% url 'aluno_list' %}"><i class="student icon"></i> Alunos</a>
+                            <a href="{% url 'aluno_list' %}"><i class="student icon"></i> {% trans "Alunos" %}</a>
                         </section>
                     </section>
                     <a class="ui bottom attached button teal" href="{% url 'cadastra_aluno' %}">
@@ -29,7 +30,7 @@
                 <section class="card">
                     <section class="content center aligned">
                         <section class="header">
-                            <a href="{% url 'curso_list' %}"><i class="book icon"></i> Cursos</a>
+                            <a href="{% url 'curso_list' %}"><i class="book icon"></i> {% trans "Cursos" %}</a>
                         </section>
                     </section>
                     <a class="ui bottom attached button teal" href="{% url 'cadastra_curso' %}">
@@ -39,7 +40,7 @@
                 <section class="card">
                     <section class="content center aligned">
                         <section class="header">
-                            <a href="{% url 'turma_list' %}"><i class="edit icon"></i> Turmas</a>
+                            <a href="{% url 'turma_list' %}"><i class="edit icon"></i> {% trans "Turmas" %}</a>
                         </section>
                     </section>
                     <a class="ui bottom attached button teal" href="{% url 'cadastra_turma' %}">
@@ -50,7 +51,7 @@
                     <section class="content center aligned">
                         <section class="header">
                             <a href="{% url 'ocorrencia_list' %}"><i class="announcement icon"></i>
-                                Ocorrências</a>
+                                {% trans "Ocorrências" %}</a>
                         </section>
                     </section>
                     <a class="ui bottom attached button teal" href="{% url 'filtra_aluno' %}">
@@ -61,7 +62,7 @@
         </section>
     {% else %}
         <section class="ui twelve wide column segment">
-            <h3 class="ui dividing header centered"><i class="announcement icon"></i>Ocorrências</h3>
+            <h3 class="ui dividing header centered"><i class="announcement icon"></i>{% trans "Ocorrências" %}</h3>
             <section class="ui grid">
                 <section class="two wide column"></section>
                 <section class="twelve wide column">
@@ -69,7 +70,7 @@
                         <section class="row">
                             <section class="ui fluid category search">
                                 <section class="ui icon input">
-                                    <input class="prompt" placeholder="Procurar Ocorrência" type="text">
+                                    <input class="prompt" placeholder={% trans "Procurar Ocorrência" %} type="text">
                                     <i class="search icon"></i>
                                 </section>
                                 <section class="results"></section>
@@ -82,9 +83,9 @@
                 <table class="ui compact  table">
                     <thead class="full-width center aligned">
                     <tr>
-                        <th><i class="user icon"></i>Pessoa</th>
-                        <th><i class="calendar icon"></i>Data</th>
-                        <th><i class="info icon"></i>Motivo</th>
+                        <th><i class="user icon"></i>{% trans "Pessoa" %}</th>
+                        <th><i class="calendar icon"></i>{% trans "Data" %}</th>
+                        <th><i class="info icon"></i>{% trans "Motivo" %}</th>
                     </tr>
                     </thead>
                     <tbody class="center aligned">

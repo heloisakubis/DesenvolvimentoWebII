@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block conteudo %}
     <section class="ui twelve wide column segment">
-        <h3 class="ui dividing header centered"><i class="users icon"></i>Turmas</h3>
+        <h3 class="ui dividing header centered"><i class="users icon"></i>{%trans "Turmas"}</h3>
         <table class="ui table">
             <thead class="ui center aligned">
             <tr>
-                <th><i class="user icon"></i>Nome</th>
-                <th><i class="info icon"></i>Descrição</th>
-                <th><i class=""></i>Ano</th>
-                <th><i class="settings icon"></i>Ações</th>
+                <th><i class="user icon"></i>{% trans "Nome" %}</th>
+                <th><i class="info icon"></i>{% trans "Descrição" %}</th>
+                <th><i class=""></i>{% trans "Ano" %}</th>
+                <th><i class="settings icon"></i>{% trans "Ações" %}</th>
             </tr>
             </thead>
             <tbody class="ui center aligned">
@@ -38,7 +39,7 @@
                 <th colspan="4">
                     <a class="ui right floated small green labeled icon button"
                        href="{% url 'cadastra_turma' %}">
-                        <i class="plus icon"></i> Nova Turma
+                        <i class="plus icon"></i> {% trans "Nova Turma" %}
                     </a>
                 </th>
             </tr>

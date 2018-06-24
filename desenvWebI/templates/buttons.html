@@ -1,10 +1,11 @@
+{% load i18n %}
 <section class="ui centered grid">
     <section class="ui row"></section>
     <section class="ui column centered row">
-        <input type="submit" name="submit" class="ui button green" value="Cadastrar"/>
-        <input type="reset" name="limpar" class="ui button" value="Limpar"/>
+        <input type="submit" name="submit" class="ui button green" value={% trans "Cadastrar" %}>
+        <input type="reset" name="limpar" class="ui button" value={% trans "Limpar" %}>
         <a class="ui button red" href="/">
-            Cancelar
+            {% trans "Cancelar" %}
         </a>
     </section>
 </section>

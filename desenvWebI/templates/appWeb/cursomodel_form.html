@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block conteudo %}
     <form class="ui twelve wide column large form segment" action="" method="post">
-        <h4 class="ui dividing header center aligned"><i class="users icon"></i>Curso</h4>
+        <h4 class="ui dividing header center aligned"><i class="users icon"></i>{% trans "Curso" %}</h4>
         {% csrf_token %}
         <section class="ui equal width form">
             <section class="fields">
                 <section class="field">
-                    <label>Nome</label>
+                    <label>{% trans "Nome" %}</label>
                     {{ form.nome }}
                     {% if form.nome.errors %}
                         <section class="ui pointing red basic label">
@@ -17,7 +18,7 @@
                     {% endif %}
                 </section>
                 <section class="field">
-                    <label>Coordenador</label>
+                    <label>{% trans "Coordenador" %}</label>
                     {{ form.coordenador }}
                     {% if form.coordenador.errors %}
                         <section class="ui pointing red basic label">
@@ -26,7 +27,7 @@
                     {% endif %}
                 </section>
                 <section class="field">
-                    <label>Tipo de Oferta</label>
+                    <label>{% trans "Tipo de Oferta" %}</label>
                     {{ form.oferta }}
                     {% if form.oferta.errors %}
                         <section class="ui pointing red basic label">
@@ -35,7 +36,7 @@
                     {% endif %}
                 </section>
                 <section class="field">
-                    <label>Duração</label>
+                    <label>{% trans "Duração" %}</label>
                     {{ form.duracao }}
                     {% if form.duracao.errors %}
                         <section class="ui pointing red basic label">
@@ -46,7 +47,7 @@
             </section>
             <section class="fields">
                 <section class="field">
-                    <label>Descrição do Curso</label>
+                    <label>{% trans "Descrição do Curso" %}</label>
                     {{ form.descricao }}
                     {% if form.descricao.errors %}
                         <section class="ui pointing red basic label">

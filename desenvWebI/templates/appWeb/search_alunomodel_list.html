@@ -1,29 +1,30 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block conteudo %}
 <section class="ui twelve wide column segment">
-    <h3 class="ui dividing header centered "><i class="student icon"></i>Ocorrência</h3>
-    <p class="ui teal message ">Pesquise e selecione um aluno para adicionar uma ocorrência.</p>
+    <h3 class="ui dividing header centered "><i class="student icon"></i>{% trans "Ocorrência" %}</h3>
+    <p class="ui teal message ">{% trans "Pesquise e selecione um aluno para adicionar uma ocorrência." %}</p>
     <form class="ui form" method="get" action="">
         {% csrf_token %}
             <section class="ui fields">
                 <section class="ten wide field">
                     <p class="ui icon input">
-                        <input name="name" class="" placeholder="Pesquisar por ..." type="text">
+                        <input name="name" class="" placeholder={% trans "Pesquisar por ..." %} type="text">
                         <i class="search icon"></i>
                     </p>
                 </section>
                 <p class="four wide field">
                     <select id="id_tipo" name="tipo">
-                        <option value="nome">Nome</option>
-                        <option value="matricula">Matricula</option>
-                        <option value="turma">Turma</option>
-                        <option value="curso">Curso</option>
+                        <option value="nome">{% trans "Nome" %}</option>
+                        <option value="matricula">{% trans "Matricula" %}</option>
+                        <option value="turma">{% trans "Turma" %}</option>
+                        <option value="curso">{% trans "Curso" %}</option>
                     </select>
                 </p>
                 <p class="two wide field">
-                    <button class="ui button" type="submit">Pesquisar</button>
+                    <button class="ui button" type="submit">{%trans "Pesquisar" %}</button>
                 </p>
             </section>
     </form>
@@ -31,10 +32,10 @@
     <table class="ui compact  table">
         <thead class="full-width center aligned">
         <tr>
-            <th><i class="user icon"></i>Pessoa</th>
-            <th><i class="mail icon"></i>E-mail</th>
-            <th><i class="id card icon"></i>Número de matrícula</th>
-            <th><i class="add icon"></i>Adicionar</th>
+            <th><i class="user icon"></i>{% trans "Pessoa" %}</th>
+            <th><i class="mail icon"></i> E-mail</th>
+            <th><i class="id card icon"></i>{% trans "Número de matrícula" %}</th>
+            <th><i class="add icon"></i>{% trans "Adicionar" %}</th>
         </tr>
         </thead>
         <tbody class="center aligned">
@@ -59,7 +60,7 @@
             <th colspan="4">
                 <a class="ui right floated small green labeled icon button"
                    href="{% url 'cadastra_aluno' %}">
-                    <i class="plus icon"></i> Novo Aluno
+                    <i class="plus icon"></i> {% trans "Novo Aluno" %}
                 </a>
             </th>
         </tr>

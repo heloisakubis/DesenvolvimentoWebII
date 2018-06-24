@@ -1,0 +1,263 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-24 17:39-0300\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/appWeb/alunomodel_form.html:7
+#: templates/appWeb/ocorrenciamodel_form.html:12
+msgid "Aluno"
+msgstr "Student"
+
+#: templates/appWeb/alunomodel_form.html:12
+#: templates/appWeb/cursomodel_form.html:12
+#: templates/appWeb/cursomodel_list.html:12
+#: templates/appWeb/funcionariomodel_form.html:12
+#: templates/appWeb/search_alunomodel_list.html:20
+#: templates/appWeb/tipofuncionariomodel_form.html:12
+#: templates/appWeb/tipoofertamodel_form.html:13
+#: templates/appWeb/tipopermissaomodel_form.html:14
+#: templates/appWeb/turmamodel_form.html:12
+#: templates/appWeb/turmamodel_list.html:11
+msgid "Nome"
+msgstr "Name"
+
+#: templates/appWeb/alunomodel_form.html:32
+#: templates/appWeb/search_alunomodel_list.html:22
+#: templates/appWeb/turmamodel_form.html:7
+msgid "Turma"
+msgstr "Class"
+
+#: templates/appWeb/alunomodel_form.html:41
+#: templates/appWeb/cursomodel_form.html:7
+#: templates/appWeb/search_alunomodel_list.html:23
+#: templates/appWeb/turmamodel_form.html:30
+msgid "Curso"
+msgstr "Course"
+
+#: templates/appWeb/alunomodel_form.html:50
+#: templates/appWeb/funcionariomodel_form.html:59
+msgid "Número de Matrícula"
+msgstr "Registration Number"
+
+#: templates/appWeb/alunomodel_form.html:61
+msgid "Nome da Mãe"
+msgstr "Mother's Name"
+
+#: templates/appWeb/alunomodel_form.html:70
+msgid "Nome do Pai"
+msgstr "Father's Name"
+
+#: templates/appWeb/alunomodel_form.html:79
+msgid "Telefone do Responsável"
+msgstr "Responsible Telephone"
+
+#: templates/appWeb/alunomodel_list.html:7 templates/index.html.py:23
+msgid "Alunos"
+msgstr "Students"
+
+#: templates/appWeb/alunomodel_list.html:15
+#: templates/appWeb/funcionariomodel_list.html:11
+#: templates/appWeb/ocorrenciamodel_list.html:11
+#: templates/appWeb/search_alunomodel_list.html:35 templates/index.html:86
+msgid "Pessoa"
+msgstr "Person"
+
+#: templates/appWeb/alunomodel_list.html:17
+#: templates/appWeb/funcionariomodel_list.html:13
+#: templates/appWeb/search_alunomodel_list.html:37
+#, fuzzy
+#| msgid "Número de Matrícula"
+msgid "Número de matrícula"
+msgstr "Registration Number"
+
+#: templates/appWeb/alunomodel_list.html:18
+#: templates/appWeb/cursomodel_list.html:15
+#: templates/appWeb/funcionariomodel_list.html:14
+#: templates/appWeb/ocorrenciamodel_list.html:14
+#: templates/appWeb/turmamodel_list.html:14
+msgid "Ações"
+msgstr "Actions"
+
+#: templates/appWeb/alunomodel_list.html:46
+#: templates/appWeb/search_alunomodel_list.html:63
+msgid "Novo Aluno"
+msgstr "New Student"
+
+#: templates/appWeb/cursomodel_form.html:21
+#: templates/appWeb/cursomodel_list.html:14
+msgid "Coordenador"
+msgstr "Coordinator"
+
+#: templates/appWeb/cursomodel_form.html:30
+msgid "Tipo de Oferta"
+msgstr "Type of Offer"
+
+#: templates/appWeb/cursomodel_form.html:39
+msgid "Duração"
+msgstr "Duration"
+
+#: templates/appWeb/cursomodel_form.html:50
+msgid "Descrição do Curso"
+msgstr "Course Description"
+
+#: templates/appWeb/cursomodel_list.html:7 templates/index.html.py:33
+msgid "Cursos"
+msgstr "Courses"
+
+#: templates/appWeb/cursomodel_list.html:13
+#: templates/appWeb/turmamodel_form.html:40
+#: templates/appWeb/turmamodel_list.html:12
+msgid "Descrição"
+msgstr "Description"
+
+#: templates/appWeb/cursomodel_list.html:42
+msgid "Novo Curso"
+msgstr "New Course"
+
+#: templates/appWeb/funcionariomodel_form.html:7
+msgid "Funcionário"
+msgstr "Employee"
+
+#: templates/appWeb/funcionariomodel_form.html:21
+msgid "Sobrenome"
+msgstr "Last Name"
+
+#: templates/appWeb/funcionariomodel_form.html:41
+msgid "Usuário"
+msgstr "User"
+
+#: templates/appWeb/funcionariomodel_form.html:50
+msgid "Senha"
+msgstr "Password"
+
+#: templates/appWeb/funcionariomodel_form.html:70
+msgid "Cargo"
+msgstr "Post"
+
+#: templates/appWeb/funcionariomodel_list.html:7 templates/index.html.py:13
+msgid "Funcionários"
+msgstr "Employees"
+
+#: templates/appWeb/funcionariomodel_list.html:40
+msgid "Adicionar Novo"
+msgstr "Add New"
+
+#: templates/appWeb/ocorrenciamodel_form.html:7
+#: templates/appWeb/search_alunomodel_list.html:7
+msgid "Ocorrência"
+msgstr "Occurrence"
+
+#: templates/appWeb/ocorrenciamodel_form.html:30
+msgid "Tipo de Ocorrência"
+msgstr "Occurrence Type"
+
+#: templates/appWeb/ocorrenciamodel_form.html:41
+#: templates/appWeb/ocorrenciamodel_list.html:12 templates/index.html.py:87
+msgid "Data"
+msgstr "Date"
+
+#: templates/appWeb/ocorrenciamodel_form.html:45
+msgid "Hora"
+msgstr "Hour"
+
+#: templates/appWeb/ocorrenciamodel_form.html:49
+#: templates/appWeb/ocorrenciamodel_list.html:13 templates/index.html.py:88
+msgid "Motivo"
+msgstr "Reason"
+
+#: templates/appWeb/ocorrenciamodel_list.html:7 templates/index.html.py:54
+#: templates/index.html:65
+msgid "Ocorrências"
+msgstr "Occurrences"
+
+#: templates/appWeb/ocorrenciamodel_list.html:39
+msgid "Nova Ocorrência"
+msgstr "New Occurrence"
+
+#: templates/appWeb/search_alunomodel_list.html:8
+msgid "Pesquise e selecione um aluno para adicionar uma ocorrência."
+msgstr "Search and select a student to add an occurrence."
+
+#: templates/appWeb/search_alunomodel_list.html:14
+msgid "Pesquisar por ..."
+msgstr "Search for ..."
+
+#: templates/appWeb/search_alunomodel_list.html:21
+#, fuzzy
+#| msgid "Matrícula"
+msgid "Matricula"
+msgstr "Registration"
+
+#: templates/appWeb/search_alunomodel_list.html:27
+msgid "Pesquisar"
+msgstr "Search"
+
+#: templates/appWeb/search_alunomodel_list.html:38
+msgid "Adicionar"
+msgstr "Add"
+
+#: templates/appWeb/tipofuncionariomodel_form.html:7
+msgid "Cadastro de Tipo de Funcionários"
+msgstr "Employee Type Registration"
+
+#: templates/appWeb/tipoofertamodel_form.html:7
+msgid "Cadastro de Tipo de Oferta para Cursos"
+msgstr "Course Offer Type Registration"
+
+#: templates/appWeb/tipopermissaomodel_form.html:8
+msgid "Cadastro de Tipo de Permissão"
+msgstr "Permit Type Registration"
+
+#: templates/appWeb/turmamodel_form.html:21
+#: templates/appWeb/turmamodel_list.html:13
+msgid "Ano"
+msgstr "Year"
+
+#: templates/appWeb/turmamodel_list.html:42
+msgid "Nova Turma"
+msgstr "New Class"
+
+#: templates/base.html:20
+msgid "Sistema de Controle de Fluxo de Alunos"
+msgstr "Student Flow Control System"
+
+#: templates/base.html:26
+msgid "Documentação"
+msgstr "Documentation"
+
+#: templates/base.html:30
+msgid "Sair"
+msgstr "Logout"
+
+#: templates/buttons.html:5
+msgid "Cadastrar"
+msgstr "Register"
+
+#: templates/buttons.html:6
+msgid "Limpar"
+msgstr "Clean"
+
+#: templates/buttons.html:8
+msgid "Cancelar"
+msgstr "Cancel"
+
+#: templates/idiomas.html:14
+msgid "Mudar idioma"
+msgstr ""
+
+#: templates/index.html:43
+msgid "Turmas"
+msgstr "Classes"
+
+#: templates/index.html:73
+msgid "Procurar Ocorrência"
+msgstr "Search Occurrence"
+
+#~ msgid "Acesse sua conta"
+#~ msgstr "Access your account"
+
+#~ msgid "Usuário ou senha inválidos!"
+#~ msgstr "Invalid user or password!"

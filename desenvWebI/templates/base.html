@@ -1,6 +1,8 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     {% load staticfiles static %}
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href='{% static "semanticui/dist/semantic.min.css" %}'>
@@ -15,16 +17,17 @@
     <h2 class="ui inverted image header">
         <img class="image" src='{% static "logo.png" %}'>
 
-        <span class="content"> Sistema de Controle de Fluxo de Alunos</span>
+        <span class="content"> {% trans "Sistema de Controle de Fluxo de Alunos" %}</span>
     </h2>
 </header>
 {% if user.is_authenticated %}
     <nav class="ui menu stackable">
         <a class="item" href="{% url 'index' %}"><i class="icon large home"></i>Home</a>
-        <a class="item" href="https://siflux-documentacao.readthedocs.io"><i class="icon large book"></i>Documentação</a>
+        <a class="item" href="https://siflux-documentacao.readthedocs.io"><i class="icon large book"></i>{% trans "Documentação"%}</a>
 
         <div class="menu right aligned stackable">
-            <a class="item" href="{% url 'logout' %}"><i class="log out icon large "></i>Sair</a>
+            {% include "idiomas.html" %}
+            <a class="item" href="{% url 'logout' %}"><i class="log out icon large "></i>{% trans "Sair" %}</a>
         </div>
     </nav>
 {% endif %}
