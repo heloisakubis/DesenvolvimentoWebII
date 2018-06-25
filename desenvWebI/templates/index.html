@@ -4,101 +4,101 @@
 
 
 {% block conteudo %}
-    {% if user|verifica_func:'NUPE' %}
-        <section class="ui twelve wide column">
-            <section class="ui three stackable centered aligned cards">
-                <section class="card">
-                    <section class="content center aligned">
-                        <section class="header">
-                            <a href="{% url 'funcionario_list' %}"><i class="users icon"></i> {% trans "Funcionários" %}</a>
-                        </section>
-                    </section>
-                    <a class="ui bottom attached button teal" href="{% url 'cadastra_funcionario' %}">
-                            <i class="add icon"></i>
-                    </a>
+{% if user|verifica_func:'NUPE' %}
+<section class="ui twelve wide column">
+    <section class="ui three stackable centered aligned cards">
+        <section class="card">
+            <section class="content center aligned">
+                <section class="header">
+                    <a href="{% url 'funcionario_list' %}"><i class="users icon"></i> {% trans "Funcionários" %}</a>
                 </section>
-                <section class="card">
-                    <section class="content center aligned">
-                        <section class="header">
-                            <a href="{% url 'aluno_list' %}"><i class="student icon"></i> {% trans "Alunos" %}</a>
-                        </section>
-                    </section>
-                    <a class="ui bottom attached button teal" href="{% url 'cadastra_aluno' %}">
-                            <i class="add icon"></i>
-                    </a>
+            </section>
+            <a class="ui bottom attached button teal" href="{% url 'cadastra_funcionario' %}">
+                <i class="add icon"></i>
+            </a>
+        </section>
+        <section class="card">
+            <section class="content center aligned">
+                <section class="header">
+                    <a href="{% url 'aluno_list' %}"><i class="student icon"></i> {% trans "Alunos" %}</a>
                 </section>
-                <section class="card">
-                    <section class="content center aligned">
-                        <section class="header">
-                            <a href="{% url 'curso_list' %}"><i class="book icon"></i> {% trans "Cursos" %}</a>
-                        </section>
-                    </section>
-                    <a class="ui bottom attached button teal" href="{% url 'cadastra_curso' %}">
-                            <i class="add icon"></i>
-                    </a>
+            </section>
+            <a class="ui bottom attached button teal" href="{% url 'cadastra_aluno' %}">
+                <i class="add icon"></i>
+            </a>
+        </section>
+        <section class="card">
+            <section class="content center aligned">
+                <section class="header">
+                    <a href="{% url 'curso_list' %}"><i class="book icon"></i> {% trans "Cursos" %}</a>
                 </section>
-                <section class="card">
-                    <section class="content center aligned">
-                        <section class="header">
-                            <a href="{% url 'turma_list' %}"><i class="edit icon"></i> {% trans "Turmas" %}</a>
-                        </section>
-                    </section>
-                    <a class="ui bottom attached button teal" href="{% url 'cadastra_turma' %}">
-                            <i class="add icon"></i>
-                    </a>
+            </section>
+            <a class="ui bottom attached button teal" href="{% url 'cadastra_curso' %}">
+                <i class="add icon"></i>
+            </a>
+        </section>
+        <section class="card">
+            <section class="content center aligned">
+                <section class="header">
+                    <a href="{% url 'turma_list' %}"><i class="edit icon"></i> {% trans "Turmas" %}</a>
                 </section>
-                <section class="card">
-                    <section class="content center aligned">
-                        <section class="header">
-                            <a href="{% url 'ocorrencia_list' %}"><i class="announcement icon"></i>
-                                {% trans "Ocorrências" %}</a>
+            </section>
+            <a class="ui bottom attached button teal" href="{% url 'cadastra_turma' %}">
+                <i class="add icon"></i>
+            </a>
+        </section>
+        <section class="card">
+            <section class="content center aligned">
+                <section class="header">
+                    <a href="{% url 'ocorrencia_list' %}"><i class="announcement icon"></i>
+                        {% trans "Ocorrências" %}</a>
+                </section>
+            </section>
+            <a class="ui bottom attached button teal" href="{% url 'filtra_aluno' %}">
+                <i class="add icon"></i>
+            </a>
+        </section>
+    </section>
+</section>
+{% else %}
+<section class="ui twelve wide column segment">
+    <h3 class="ui dividing header centered"><i class="announcement icon"></i>{% trans "Ocorrências" %}</h3>
+    <section class="ui grid">
+        <section class="two wide column"></section>
+        <section class="twelve wide column">
+            <section class="ui centered grid">
+                <section class="row">
+                    <section class="ui fluid category search">
+                        <section class="ui icon input">
+                            <input class="prompt" placeholder={% trans "Procurar Ocorrência" %} type="text">
+                            <i class="search icon"></i>
                         </section>
+                        <section class="results"></section>
                     </section>
-                    <a class="ui bottom attached button teal" href="{% url 'filtra_aluno' %}">
-                            <i class="add icon"></i>
-                    </a>
                 </section>
             </section>
         </section>
-    {% else %}
-        <section class="ui twelve wide column segment">
-            <h3 class="ui dividing header centered"><i class="announcement icon"></i>{% trans "Ocorrências" %}</h3>
-            <section class="ui grid">
-                <section class="two wide column"></section>
-                <section class="twelve wide column">
-                    <section class="ui centered grid">
-                        <section class="row">
-                            <section class="ui fluid category search">
-                                <section class="ui icon input">
-                                    <input class="prompt" placeholder={% trans "Procurar Ocorrência" %} type="text">
-                                    <i class="search icon"></i>
-                                </section>
-                                <section class="results"></section>
-                            </section>
-                        </section>
-                    </section>
-                </section>
-                <section class="two wide column"></section>
+        <section class="two wide column"></section>
 
-                <table class="ui compact  table">
-                    <thead class="full-width center aligned">
-                    <tr>
-                        <th><i class="user icon"></i>{% trans "Pessoa" %}</th>
-                        <th><i class="calendar icon"></i>{% trans "Data" %}</th>
-                        <th><i class="info icon"></i>{% trans "Motivo" %}</th>
-                    </tr>
-                    </thead>
-                    <tbody class="center aligned">
-                    {% for ocorrencia in object_list %}
-                        <tr>
-                            <td>{{ ocorrencia.aluno }}</td>
-                            <td>{{ ocorrencia.data_ocorrencia }}</td>
-                            <td>{{ ocorrencia.motivo }}</td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
-            </section>
-        </section>
-    {% endif %}
+        <table class="ui compact  table">
+            <thead class="full-width center aligned">
+            <tr>
+                <th><i class="user icon"></i>{% trans "Pessoa" %}</th>
+                <th><i class="calendar icon"></i>{% trans "Data" %}</th>
+                <th><i class="info icon"></i>{% trans "Motivo" %}</th>
+            </tr>
+            </thead>
+            <tbody class="center aligned">
+            {% for ocorrencia in object_list %}
+            <tr>
+                <td>{{ ocorrencia.aluno }}</td>
+                <td>{{ ocorrencia.data_ocorrencia }}</td>
+                <td>{{ ocorrencia.motivo }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</section>
+{% endif %}
 {% endblock %}
