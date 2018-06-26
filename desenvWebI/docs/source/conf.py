@@ -202,4 +202,12 @@ epub_copyright = copyright
 epub_exclude_files = ['search.html']
 
 
-# -- Extension configuration -------------------------------------------------
+
+autodoc_member_order = 'bysource'
+autodoc_default_flags = ['members']
+autosummary_generate = True
+intersphinx_mapping = {
+    'python': ('http://python.readthedocs.org/en/v2.7.2/', None),
+    'django': ('http://docs.djangoproject.com/en/1.9/', 'https://docs.djangoproject.com/en/1.9/_objects/'),
+    'sphinx': ('http://sphinx.readthedocs.org/en/latest/', None),
+}
