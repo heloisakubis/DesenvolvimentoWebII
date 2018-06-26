@@ -37,11 +37,6 @@ msgstr "Class"
 msgid "Curso"
 msgstr "Course"
 
-#: templates/appWeb/alunomodel_form.html:50
-#: templates/appWeb/funcionariomodel_form.html:59
-msgid "Número de Matrícula"
-msgstr "Registration Number"
-
 #: templates/appWeb/alunomodel_form.html:61
 msgid "Nome da Mãe"
 msgstr "Mother's Name"
@@ -65,11 +60,9 @@ msgstr "Students"
 msgid "Pessoa"
 msgstr "Person"
 
-#: templates/appWeb/alunomodel_list.html:17
-#: templates/appWeb/funcionariomodel_list.html:13
+#: templates/appWeb/alunomodel_form.html:50
+#: templates/appWeb/funcionariomodel_form.html:59
 #: templates/appWeb/search_alunomodel_list.html:37
-#, fuzzy
-#| msgid "Número de Matrícula"
 msgid "Número de matrícula"
 msgstr "Registration Number"
 
@@ -186,10 +179,11 @@ msgid "Pesquisar por ..."
 msgstr "Search for ..."
 
 #: templates/appWeb/search_alunomodel_list.html:21
-#, fuzzy
-#| msgid "Matrícula"
-msgid "Matricula"
+#: templates/appWeb/alunomodel_list.html:17
+#: templates/appWeb/funcionariomodel_list.html:13
+msgid "Matrícula"
 msgstr "Registration"
+
 
 #: templates/appWeb/search_alunomodel_list.html:27
 msgid "Pesquisar"
@@ -244,9 +238,9 @@ msgstr "Clean"
 msgid "Cancelar"
 msgstr "Cancel"
 
-#: templates/idiomas.html:14
-msgid "Mudar idioma"
-msgstr ""
+#: templates/idiomas.html:13
+msgid "Mudar"
+msgstr "Change language"
 
 #: templates/index.html:43
 msgid "Turmas"
@@ -256,8 +250,11 @@ msgstr "Classes"
 msgid "Procurar Ocorrência"
 msgstr "Search Occurrence"
 
-#~ msgid "Acesse sua conta"
-#~ msgstr "Access your account"
+#: templates/registration/login.html:9
+msgid "Acesse sua conta"
+msgstr "Access your account"
 
-#~ msgid "Usuário ou senha inválidos!"
-#~ msgstr "Invalid user or password!"
+#: templates/registration/login.html:16
+msgid "Usuário ou senha inválidos!"
+msgstr "Invalid user or password!"
+

@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 
+from django.utils.translation import ugettext_lazy as _
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # PROJECT_APP = os.path.basename(BASE_DIR)
@@ -141,7 +143,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = False
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -156,11 +158,15 @@ USE_TZ = False
 # MEDIA_ROOT = MEDIA_DIR
 # MEDIA_URL = '/media/'
 #
-# STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 #
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
+STATICFILES_DIRS = (
+     os.path.join(BASE_DIR, 'static'),
+ )
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 
 STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
@@ -169,3 +175,5 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 #Media files
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+
+USE_MODELTRANSLATION = True

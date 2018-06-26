@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block conteudo %}
 
     <div class="six wide centered aligned column">
         <h2 class="ui teal center aligned header">
-            <div class="content">Acesse sua conta</div>
+            <div class="content">{% trans "Acesse sua conta" %}</div>
         </h2>
         <form class="ui large form" method="post" action="{% url 'login' %}">
             {% csrf_token %}
             <div class="ui segment ">
                 {% if form.errors %}
                     <div class="ui red basic label field">
-                        Usuário ou senha inválidos!
+                        {% trans "Usuário ou senha inválidos!" %}
                     </div>
                 {% endif %}
                 <div class="field">
