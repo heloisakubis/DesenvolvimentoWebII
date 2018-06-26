@@ -13,10 +13,11 @@ Bem vindo(a) à Documentação do SIFLUX
    portaria
    sistema
 
+   modules
+
 * A aplicação possibilita o acompanhamento de entrada e saída de alunos no Campus.
 * Foram criados cadastros de professor, funcionários do NUPE, responsável pela portaria e de alunos.
 
-..
 
 Indices and tables
 ==================
