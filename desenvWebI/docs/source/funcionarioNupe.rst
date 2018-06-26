@@ -7,3 +7,6 @@ Funcionários do NUPE
 .. automodule:: appWeb.models.funcionario_model.py
 
 .. automodule:: appWeb.views.funcionario_view.py
+
+.. automodule:: io
+   :members:
