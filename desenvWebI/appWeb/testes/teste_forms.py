@@ -1,6 +1,7 @@
 # coding=utf-8
 """Testes de formulário"""
 from django.test import TestCase
+
 from appWeb.forms.tipo_oferta_form import TipoOfertaForm
 from appWeb.models.tipo_oferta_model import TipoOfertaModel
 
@@ -10,7 +11,7 @@ class TipoOfertaFormTest(TestCase):
 
         nome = TipoOfertaModel.objects.create(nome=u'Semestral Teste')
 
-        data = {'nome': nome.nome,}
+        data = {'nome': nome.nome}
 
         form = TipoOfertaForm(data=data)
 
@@ -20,7 +21,7 @@ class TipoOfertaFormTest(TestCase):
         """Método de teste de validação com resultado falso"""
         nome = TipoOfertaModel.objects.create(nome=u'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
 
-        data = {'nome': nome.nome, }
+        data = {'nome': nome.nome}
 
         form = TipoOfertaForm(data=data)
 
