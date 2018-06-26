@@ -5,5 +5,5 @@ Funcionários do NUPE
 * Efetuam o registro da informação de saída antes do horário de término de aula ou permissão de entrada em sala após o horário de início da aula.
 
 .. automodule::
-    : members:
+    :members:
 
