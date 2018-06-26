@@ -12,6 +12,7 @@ Bem vindo(a) à Documentação do SIFLUX
    professor
    portaria
    sistema
+   :caption: Contents:
 
    modules
 
