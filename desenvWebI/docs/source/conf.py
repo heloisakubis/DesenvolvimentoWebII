@@ -16,6 +16,21 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import sphinx_rtd_theme
+from os import path
+import django
+
+sys.path.append(os.path.abspath('.'))
+sys.path.append(os.path.abspath('..'))
+# sys.path.append(os.path.abspath('../../lib/python2.7/site-packages/'))
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "desenvWebI.settings")
+django.setup()
+package_dir = path.abspath(path.dirname(__file__))
+template_path = path.join(package_dir, 'themes')
+django.setup()
+local_path = lambda path: os.path.join(os.path.dirname(__file__), path)
+
+sys.path.append(local_path('..'))
+
 
 
 # -- Project information -----------------------------------------------------
@@ -41,6 +56,13 @@ release = u'0.0.1'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+              'sphinx.ext.autosummary',
+              'sphinx.ext.doctest',
+              'sphinx.ext.intersphinx',
+              'sphinx.ext.todo',
+              'sphinx.ext.coverage',
+              'sphinx.ext.imgmath',
+              'sphinx.ext.githubpages'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
