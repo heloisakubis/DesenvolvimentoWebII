@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block conteudo %}
-    <section class="ui twelve wide column segment">
+    <div class="ui twelve wide column segment">
         <h3 class="ui dividing header centered "><i class="users icon"></i>{%trans "Cursos" %}</h3>
 
         <table class="ui table">
@@ -22,14 +22,14 @@
                     <td>{{ curso.descricao }}</td>
                     <td>{{ curso.coordenador }}</td>
                     <td>
-                        <section class="floated content">
+                        <div class="floated content">
                             <a class="ui left attached button blue" href="{% url 'edita_curso' curso.id %}">
                                 <i class="edit icon"></i>
                             </a>
                             <a class="right attached ui button red" href="{% url 'exclui_curso' curso.id %}">
                                 <i class="close icon "></i>
                             </a>
-                        </section>
+                        </div>
                     </td>
                 </tr>
             {% endfor %}
@@ -45,5 +45,5 @@
             </tr>
             </tfoot>
         </table>
-    </section>
+    </div>
 {% endblock %}

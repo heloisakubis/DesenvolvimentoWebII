@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block conteudo %}
-    <section class="ui twelve wide column segment">
+    <div class="ui twelve wide column segment">
         <h3 class="ui dividing header centered"><i class="announcement icon"></i>{% trans "Ocorrências" %}</h3>
         <table class="ui table">
             <thead class="full-width center aligned">
@@ -21,11 +21,11 @@
                     <td>{{ ocorrencia.data_ocorrencia }}</td>
                     <td>{{ ocorrencia.motivo }}</td>
                     <td>
-                        <section class="floated content">
+                        <div class="floated content">
                             <a class="ui icon button blue" href="{% url 'edita_ocorrencia' ocorrencia.id %}">
                                 <i class="edit icon"></i>
                             </a>
-                        </section>
+                        </div>
                     </td>
                 </tr>
             {% endfor %}
@@ -42,5 +42,5 @@
             </tr>
             </tfoot>
         </table>
-    </section>
+    </div>
 {% endblock %}

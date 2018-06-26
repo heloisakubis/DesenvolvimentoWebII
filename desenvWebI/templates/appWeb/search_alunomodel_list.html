@@ -3,18 +3,18 @@
 {% load static %}
 
 {% block conteudo %}
-<section class="ui twelve wide column segment">
+<div class="ui twelve wide column segment">
     <h3 class="ui dividing header centered "><i class="student icon"></i>{% trans "Ocorrência" %}</h3>
     <p class="ui teal message ">{% trans "Pesquise e selecione um aluno para adicionar uma ocorrência." %}</p>
     <form class="ui form" method="get" action="">
         {% csrf_token %}
-            <section class="ui fields">
-                <section class="ten wide field">
+            <div class="ui fields">
+                <div class="ten wide field">
                     <p class="ui icon input">
                         <input name="name" class="" placeholder={% trans "Pesquisar por ..." %} type="text">
                         <i class="search icon"></i>
                     </p>
-                </section>
+                </div>
                 <p class="four wide field">
                     <select id="id_tipo" name="tipo">
                         <option value="nome">{% trans "Nome" %}</option>
@@ -26,7 +26,7 @@
                 <p class="two wide field">
                     <button class="ui button" type="submit">{%trans "Pesquisar" %}</button>
                 </p>
-            </section>
+            </div>
     </form>
 
     <table class="ui compact  table">
@@ -45,11 +45,11 @@
             <td>{{ aluno.email }}</td>
             <td>{{ aluno.matricula }}</td>
             <td>
-                <section class="floated content">
+                <div class="floated content">
                     <a class="ui icon button blue" href="{% url 'cadastra_aluno_ocorrencia' aluno.id %}">
                         <i class="add icon"></i>
                     </a>
-                </section>
+                </div>
             </td>
         </tr>
         {% endfor %}
@@ -66,6 +66,6 @@
         </tr>
         </tfoot>
     </table>
-</section>
-</section>
+</div>
+</div>
 {% endblock %}

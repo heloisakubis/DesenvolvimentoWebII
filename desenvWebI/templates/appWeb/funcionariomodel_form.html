@@ -6,77 +6,77 @@
     <form class="ui twelve wide column large form segment" action='' method="post">
         <h4 class="ui dividing header"><i class="users icon"></i>{%trans "Funcionário" %}</h4>
         {% csrf_token %}
-        <section class="ui equal width form">
-            <section class="fields">
-                <section class="field">
+        <div class="ui equal width form">
+            <div class="fields">
+                <div class="field">
                     <label>{% trans "Nome" %}</label>
                     {{ form.first_name }}
                     {% if form.first_name.errors %}
-                        <section class="ui pointing red basic label">
+                        <div class="ui pointing red basic label">
                             {{ form.first_name.errors }}
-                        </section>
+                        </div>
                     {% endif %}
-                </section>
-                <section class="field">
+                </div>
+                <div class="field">
                     <label>{% trans "Sobrenome" %}</label>
                     {{ form.last_name }}
                     {% if form.last_name.errors %}
-                        <section class="ui pointing red basic label">
+                        <div class="ui pointing red basic label">
                             {{ form.last_name.errors }}
-                        </section>
+                        </div>
                     {% endif %}
-                </section>
-                <section class="field">
+                </div>
+                <div class="field">
                     <label>E-mail</label>
                     {{ form.email }}
                     {% if form.email.errors %}
-                        <section class="ui pointing red basic label">
+                        <div class="ui pointing red basic label">
                             {{ form.email.errors }}
-                        </section>
+                        </div>
                     {% endif %}
-                </section>
-            </section>
-            <section class="fields">
-                <section class="field">
+                </div>
+            </div>
+            <div class="fields">
+                <div class="field">
                     <label>{% trans "Usuário" %}</label>
                     {{ form.username }}
                     {% if form.username.errors %}
-                        <section class="ui pointing red basic label">
+                        <div class="ui pointing red basic label">
                             {{ form.username.errors }}
-                        </section>
+                        </div>
                     {% endif %}
-                </section>
-                <section class="field">
+                </div>
+                <div class="field">
                     <label>{% trans "Senha" %}</label>
                     {{ form.password }}
                     {% if form.password.errors %}
-                        <section class="ui pointing red basic label">
+                        <div class="ui pointing red basic label">
                             {{ form.password.errors }}
-                        </section>
+                        </div>
                     {% endif %}
-                </section>
-                <section class="field">
+                </div>
+                <div class="field">
                     <label>{% trans "Número de Matrícula" %}</label>
                     {{ form.matricula }}
                     {% if form.matricula.errors %}
-                        <section class="ui pointing red basic label">
+                        <div class="ui pointing red basic label">
                             {{ form.matricula.errors }}
-                        </section>
+                        </div>
                     {% endif %}
-                </section>
-            </section>
-            <section class="fields">
-                <section class="field">
+                </div>
+            </div>
+            <div class="fields">
+                <div class="field">
                     <label>{% trans "Cargo" %}</label>
                     {{ form.funcao }}
                     {% if form.funcao.errors %}
-                        <section class="ui pointing red basic label">
+                        <div class="ui pointing red basic label">
                             {{ form.funcao.errors }}
-                        </section>
+                        </div>
                     {% endif %}
-                </section>
-            </section>
-        </section>
+                </div>
+            </div>
+        </div>
         {% include 'buttons.html' %}
     </form>
 {% endblock %}

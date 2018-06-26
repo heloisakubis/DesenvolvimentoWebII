@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block conteudo %}
-    <section class="ui twelve wide column segment">
+    <div class="ui twelve wide column segment">
         <h3 class="ui dividing header centered"><i class="users icon"></i>{%trans "Turmas"}</h3>
         <table class="ui table">
             <thead class="ui center aligned">
@@ -21,14 +21,14 @@
                     <td>{{ turma.descricao }}</td>
                     <td>{{ turma.ano }}</td>
                     <td>
-                        <section class="ui floated content">
+                        <div class="ui floated content">
                             <a class="ui left attached button blue" href="{% url 'edita_turma' turma.id %}">
                                 <i class="edit icon"></i>
                             </a>
                             <a class="ui right attached ui button red" href="{% url 'exclui_turma' turma.id %}">
                                 <i class="close icon "></i>
                             </a>
-                        </section>
+                        </div>
                     </td>
                 </tr>
             {% endfor %}
@@ -45,6 +45,6 @@
             </tr>
             </tfoot>
         </table>
-    </section>
+    </div>
 
 {% endblock %}

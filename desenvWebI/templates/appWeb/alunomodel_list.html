@@ -3,11 +3,11 @@
 {% load static %}
 
 {% block conteudo %}
-    <section class="ui twelve wide column segment">
+    <div class="ui twelve wide column segment">
         <h3 class="ui dividing header centered "><i class="student icon"></i>{% trans "Alunos" %}</h3>
-        <section class="ui grid">
-            <section class="two wide column"></section>
-            <section class="two wide column"></section>
+        <div class="ui grid">
+            <div class="two wide column"></div>
+            <div class="two wide column"></div>
 
             <table class="ui compact  table">
                 <thead class="full-width center aligned">
@@ -25,14 +25,14 @@
                         <td>{{ aluno.email }}</td>
                         <td>{{ aluno.matricula }}</td>
                         <td>
-                            <section class="floated content">
+                            <div class="floated content">
                                 <a class="ui left attached button blue" href="{% url 'edita_aluno' aluno.id %}">
                                     <i class="edit icon"></i>
                                 </a>
                                 <a class="right attached ui button red" href="{% url 'exclui_aluno' aluno.id %}">
                                     <i class="close icon "></i>
                                 </a>
-                            </section>
+                            </div>
                         </td>
                     </tr>
                 {% endfor %}
@@ -49,6 +49,6 @@
                 </tr>
                 </tfoot>
             </table>
-        </section>
-    </section>
+        </div>
+    </div>
 {% endblock %}
