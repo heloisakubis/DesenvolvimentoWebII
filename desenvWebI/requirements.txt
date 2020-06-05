@@ -3,7 +3,7 @@ Babel==2.6.0
 backports-abc==0.5
 certifi==2018.4.16
 chardet==3.0.4
-Django==1.9
+Django==1.11.29
 docutils==0.14
 futures==3.2.0
 idna==2.7
